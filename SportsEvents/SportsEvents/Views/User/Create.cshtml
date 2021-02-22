@@ -1,0 +1,89 @@
+﻿@model SportsEvents.Models.Membership
+
+@{
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+
+}
+ <h1>Admin User Membership Management</h1>
+<h2>Create User Memberhip</h2>
+
+<div>
+    <div class="row">
+        <div class="col-md-4">
+            <form asp-action="Create">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="form-group">
+                    <label asp-for="Name" class="control-label"></label>
+                    <input asp-for="Name" class="form-control" />
+                    <span asp-validation-for="Name" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="DOB" class="control-label"></label>
+                    <input asp-for="DOB" class="form-control" />
+                    <span asp-validation-for="DOB" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Gender" class="control-label"></label>
+                    <input asp-for="Gender" class="form-control" />
+                    <span asp-validation-for="Gender" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Email" class="control-label"></label>
+                    <input asp-for="Email" class="form-control" />
+                    <span asp-validation-for="Email" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="TelephoneNo" class="control-label"></label>
+                    <input asp-for="TelephoneNo" class="form-control" />
+                    <span asp-validation-for="TelephoneNo" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="MobileNo" class="control-label"></label>
+                    <input asp-for="MobileNo" class="form-control" />
+                    <span asp-validation-for="MobileNo" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="HouseNo" class="control-label"></label>
+                    <input asp-for="HouseNo" class="form-control" />
+                    <span asp-validation-for="HouseNo" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="StreetName" class="control-label"></label>
+                    <input asp-for="StreetName" class="form-control" />
+                    <span asp-validation-for="StreetName" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="PostCode" class="control-label"></label>
+                    <input asp-for="PostCode" class="form-control" />
+                    <span asp-validation-for="PostCode" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label class="control-label">Work Location:     </label>
+                    <input asp-for="WorkLocation" class="form-control" />
+                    <span asp-validation-for="WorkLocation" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label class="control-label">Sport Activity:    </label>
+                    @Html.DropDownList("SportID", null, htmlAttributes: new { @class = "form-control" })
+                </div>
+                <div class="form-group">
+                    <label asp-for="Biography" class="control-label"></label>
+                    <input asp-for="Biography" class="form-control" />
+                    <span asp-validation-for="Biography" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Skills" class="control-label"></label>
+                    <input asp-for="Skills" class="form-control" />
+                    <span asp-validation-for="Skills" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Create" class="btn btn-default" />
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<a asp-controller="Sport" asp-action="Index">Back</a>
+<div>
+
+</div>

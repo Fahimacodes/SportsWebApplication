@@ -1,0 +1,56 @@
+﻿@model SportsEvents.Models.Sport
+
+@{
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+
+}
+<h1>Admin Sports Events Management</h1>
+<h2>Edit Sports Event</h2>
+<div>
+    <div class="row">
+        <div class="col-md-4">
+            <form asp-action="Edit">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <input type="hidden" asp-for="SportID" />
+                <div class="form-group">
+                    <label asp-for="SportName" class="control-label"></label>
+                    <input asp-for="SportName" class="form-control" />
+                    <span asp-validation-for="SportName" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Event" class="control-label"></label>
+                    <input asp-for="Event" class="form-control" />
+                    <span asp-validation-for="Event" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Description" class="control-label"></label>
+                    <input asp-for="Description" class="form-control" />
+                    <span asp-validation-for="Description" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Date" class="control-label"></label>
+                    <input asp-for="Date" class="form-control" />
+                    <span asp-validation-for="Date" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Time" class="control-label"></label>
+                    <input asp-for="Time" class="form-control" />
+                    <span asp-validation-for="Time" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Location" class="control-label"></label>
+                    <input asp-for="Location" class="form-control" />
+                    <span asp-validation-for="Location" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Save" class="btn btn-default" />
+                </div>
+            </form>
+        </div>
+    </div>
+    <br />
+</div>
+<a asp-controller="Sport" asp-action="Index">Back to Sports Events</a>
+<div>
+
+</div>

@@ -1,0 +1,49 @@
+﻿@model IEnumerable<SportsEvents.Models.Sport>
+@{
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+
+}
+<h1>Admin Sports Events Management</h1>
+<a asp-action="Create">Add a New Sports Event</a>
+<br />
+<br />
+
+<table class="table">
+    <th>Sport Name</th>
+    <th>Event</th>
+    <th>Description</th>
+    <th>Date</th>
+    <th>Time</th>
+    <th>Location</th>
+
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.SportName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Event)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Description)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Date)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Time)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Location)
+                </td>
+
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.SportID">Edit</a> |
+                    <a asp-action="Delete" asp-route-id="@item.SportID">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

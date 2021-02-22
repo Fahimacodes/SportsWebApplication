@@ -1,0 +1,76 @@
+﻿@model IEnumerable<SportsEvents.Models.Membership>
+
+@{
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+
+}
+<h1>Admin User Membership Management</h1>
+
+<a asp-action="Create">Add a New Event Membership</a>
+<br />
+<br />
+
+<table class="table">
+
+    <th>Name</th>
+    <th>DOB</th>
+    <th>Gender</th>
+    <th>Email</th>
+    <th>Telephone</th>
+    <th>Mobile</th>
+    <th>House No</th>
+    <th>Street</th>
+    <th>Postcode</th>
+    <th>SportID</th>
+    <th>Biography</th>
+    <th>Skills</th>
+
+    <tbody>
+        @foreach (var m in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => m.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => m.DOB)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => m.Gender)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => m.Email)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => m.TelephoneNo)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => m.MobileNo)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => m.HouseNo)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => m.StreetName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => m.PostCode)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => m.SportID)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => m.Biography)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => m.Skills)
+                </td>
+
+                <td>
+                    <a asp-action="Edit" asp-route-id="@m.UserRegisteredID">Edit</a> |
+                    <a asp-action="Delete" asp-route-id="@m.UserRegisteredID">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

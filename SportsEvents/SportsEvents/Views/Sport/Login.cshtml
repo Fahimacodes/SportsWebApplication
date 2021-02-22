@@ -1,0 +1,49 @@
+﻿@model SportsEvents.Models.Admin
+@{
+    Layout = null;
+}
+<head runat="server">
+    <meta name="viewport" content="width=device-width" />
+    <link href="~/Style/Style.css" rel="stylesheet" type="text/css" />
+    <title>Admin Login</title>
+
+</head>
+<!-- Reference: https://www.youtube.com/watch?v=mWntrphY54w -->
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+    <h1 id="title"> Admin Login </h1>
+    <div id="login">
+        <div class="contanier">
+            <div class="row">
+                <div class="col-sm-4">
+                    <form class="form-horizontal" asp-action="Login">
+                        <div class="form-group">
+                            <label class="control-label">Username</label>
+                            <input asp-for="UserName" class="form-control" type="text" />
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label">Password</label>
+                            <input asp-for="Password" class="form-control" type="password" />
+                        </div>
+                        <div class="form-group">
+                            <input type="submit" value="Submit" />
+                        </div>
+                    </form>
+                </div>
+                <div class="col-sm-4"></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+@{
+    if (TempData["msg"] != null)
+    {
+        <script>
+            alert('@TempData["mSG"]')
+        </script>
+    }
+}

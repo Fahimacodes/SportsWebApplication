@@ -1,0 +1,21 @@
+﻿<!DocType html>
+<html>
+<head runat="server">
+    <meta name="viewport" content="width=device-width" />
+    <link href="~/Style/Style.css" rel="stylesheet" type="text/css" />
+    <title>Sports Events</title>
+</head>
+<body>
+    <div class="navbar-collapse collapse">
+        <ul class="nav navbar-nav">
+            <li><a asp-area="" asp-controller="Home" asp-action="Homepage">Home</a></li>
+            <li><a asp-area="" asp-controller="Home" asp-action="Membership">Membership</a></li>
+            <li><a asp-area="" asp-controller="Home" asp-action="Index">Logout</a></li>
+        </ul>
+    </div>
+    <div>
+        @RenderBody()
+    </div>
+
+</body>
+</html>

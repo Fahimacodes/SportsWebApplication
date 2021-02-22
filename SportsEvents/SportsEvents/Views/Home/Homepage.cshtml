@@ -1,0 +1,35 @@
+﻿@model IEnumerable<SportsEvents.Models.Sport>
+
+<h1>Sports Events Home</h1>
+
+<h4> Below we have a range of sports events taking place throughout the year<br />
+    Complete a Membership form to attend any event</h4>
+
+<table class="table">
+    <tbody>
+        @foreach (var item in Model)
+        {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.SportName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Event)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Description)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Date)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Time)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Location)
+            </td>
+
+        </tr>
+        }
+    </tbody>
+</table>
